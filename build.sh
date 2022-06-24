@@ -2,7 +2,10 @@ rm -rf build
 mkdir build
 
 cp -r META-INF build
-cp -r theme build
+
+mkdir build/theme
+mkdir build/theme/steedos
+cp -r theme/keywind/* build/theme/steedos
 
 cd build
 
