@@ -26,7 +26,7 @@
       <@document.kw />
     </head>
     <body>
-      <div class="absolute w-full h-full">
+      <div class="">
         <div class="fixed bg-white justify-center mx-auto h-full w-full" style="z-index:-1; background-image: url('${url.resourcesPath}/dist/images/background.svg'); background-color: rgb(248, 248, 248);"></div>
       </div>
       <@container.kw>
