@@ -25,8 +25,8 @@ services:
     command:
       - "start --auto-build --hostname-strict=false"
     volumes:
-      - './steedos-theme.jar:/opt/keycloak/providers/steedos-theme.jar'
-      # - './theme/keywind:/opt/keycloak/themes/keywind'
+      # - './steedos-theme.jar:/opt/keycloak/providers/steedos-theme.jar'
+      - './build/theme/steedos:/opt/keycloak/themes/steedos'
     depends_on:
       - postgres
     ports:

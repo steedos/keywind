@@ -28,6 +28,7 @@
       <@container.kw>
         <@card.kw>
           <@cardHeader.kw>
+            <img alt="logo" src="${url.resourcesPath}/dist/images/logo.png" class="h-10">
             <@title.kw />
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
               <@subtitle.kw>
@@ -62,6 +63,9 @@
           </#if>
         </@nav.kw>
       </@container.kw>
+      <div>
+        <div class="fixed bg-white justify-center mx-auto h-full w-full" style="background-image: url('${url.resourcesPath}/dist/images/background.svg'); background-color: rgb(248, 248, 248);"></div>
+      </div>
     </body>
   </html>
 </#macro>

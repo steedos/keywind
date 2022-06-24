@@ -1,3 +1,5 @@
+yarn build 
+
 rm -rf build
 mkdir build
 
