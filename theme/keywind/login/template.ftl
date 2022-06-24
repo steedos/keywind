@@ -20,15 +20,19 @@
   displayRequiredFields=false
   showAnotherWayIfPresent=true
 >
+  <!doctype html>
   <html>
     <head>
       <@document.kw />
     </head>
     <body>
+      <div class="absolute w-full h-full">
+        <div class="fixed bg-white justify-center mx-auto h-full w-full" style="z-index:-1; background-image: url('${url.resourcesPath}/dist/images/background.svg'); background-color: rgb(248, 248, 248);"></div>
+      </div>
       <@container.kw>
         <@card.kw>
           <@cardHeader.kw>
-            <img alt="logo" src="${url.resourcesPath}/dist/images/logo.png" class="h-10">
+            <img alt="logo" src="${url.resourcesPath}/dist/images/logo.png" class="h-10 mx-auto">
             <@title.kw />
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
               <@subtitle.kw>
@@ -63,9 +67,6 @@
           </#if>
         </@nav.kw>
       </@container.kw>
-      <div>
-        <div class="fixed bg-white justify-center mx-auto h-full w-full" style="background-image: url('${url.resourcesPath}/dist/images/background.svg'); background-color: rgb(248, 248, 248);"></div>
-      </div>
     </body>
   </html>
 </#macro>
