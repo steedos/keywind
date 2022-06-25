@@ -9,3 +9,7 @@ node_modules/
 build
 
 theme/keywind/login/resources
+
+keycloak-18.0.2
+
+*.tar.gz

@@ -14,25 +14,26 @@
     <form action="${url.registrationAction}" class="m-0 space-y-4" method="post">
       <div>
         <@inputPrimary.kw
-          autocomplete="given-name"
+          autocomplete="first-name"
           autofocus=true
           invalid=["firstName"]
           name="firstName"
           type="text"
           value=(register.formData.firstName)!''
         >
-          ${msg("firstName")}
+          ${msg("fullName")}
         </@inputPrimary.kw>
       </div>
       <div>
         <@inputPrimary.kw
-          autocomplete="family-name"
-          invalid=["lastName"]
-          name="lastName"
+          autocomplete="phone-number"
+          invalid=["phoneNumber"]
+          id="user.attributes.phoneNumber"
+          name="user.attributes.phoneNumber"
           type="text"
-          value=(register.formData.lastName)!''
+          value=(register.formData.phoneNumber)!''
         >
-          ${msg("lastName")}
+          ${msg("phoneNumber")}
         </@inputPrimary.kw>
       </div>
       <div>
