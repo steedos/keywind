@@ -2,7 +2,7 @@
   "themes": [
     {
       "name": "steedos",
-      "types": ["login"]
+      "types": ["account", "admin", "email", "login","welcome"]
     }
   ]
 }
