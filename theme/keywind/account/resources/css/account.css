@@ -19,11 +19,14 @@ header .navbar {
 }
 
 .navbar-title {
+    background-position: left center;
     background-image: url('../img/logo.png');
-    height: 25px;
+    height: 35px;
     background-repeat: no-repeat;
     width: 123px;
-    margin: 3px 10px 5px;
+    background-size: 30px 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     text-indent: -99999px;
 }
 
