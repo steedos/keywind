@@ -1,11 +1,11 @@
 <#import "./socials.ftl" as socials>
 
 <#macro kw>
-  <div class="separate pt-4">${msg("identity-provider-login-label")}</div>
+  <div class="separate pt-4 text-sm">${msg("identity-provider-login-label")}</div>
   <div class="flex <#if social.providers?size gt 3>justify-between<#else>justify-around</#if>">
     <#list social.providers as provider>
       <a
-        class="text-5xl"
+        class="text-4xl"
         data-provider="${provider.alias}"
         href="${provider.loginUrl}"
         title="${provider.displayName!}"
