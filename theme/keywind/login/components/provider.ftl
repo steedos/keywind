@@ -13,8 +13,10 @@
       >
         <#if provider.iconClasses?has_content>
           <i class="${provider.iconClasses!}"></i>
-        <#else>
+        <#elseif socials[provider.alias]??>
           <@socials[provider.alias] />
+        <#else>
+          <span>${provider.displayName!}</span>
         </#if>
       </a>
     </#list>
