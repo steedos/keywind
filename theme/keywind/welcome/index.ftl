@@ -41,7 +41,7 @@
     </#if>
 
     <script type="text/javascript">
-      document.location = '/admin/'
+      document.location = '/realms/master/account/'
     </script>
 </head>
 

@@ -19,14 +19,15 @@ services:
       - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
       - PROXY_ADDRESS_FORWARDING=true
       - KC_HTTP_ENABLED=true
-      - KC_PROXY=edge
+      - KC_PROXY=passthrough
       - KC_DB=postgres
       - KC_DB_URL=jdbc:postgresql://postgres/${POSTGRES_DB}
       - KC_DB_USERNAME=${POSTGRES_USER}
       - KC_DB_PASSWORD=${POSTGRES_PASSWORD}
       - KC_SPI_THEME_DEFAULT=steedos
+      - KC_HOSTNAME_STRICT=false
     command:
-      - "start --auto-build --hostname-strict=false"
+      - "start --auto-build -Dkeycloak.frontendUrl=https://id.steedos.cn -Dkeycloak.forceBackendUrlToFrontendUrl=true"
     volumes:
       # - './steedos-theme.jar:/opt/keycloak/providers/steedos-theme.jar'
       - './build/theme/steedos:/opt/keycloak/themes/steedos'
