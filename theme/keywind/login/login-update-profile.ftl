@@ -44,10 +44,9 @@
           type="text"
           value=(user.firstName)!''
         >
-          ${msg("fullName")}
+          ${msg("firstName")}
         </@inputPrimary.kw>
       </div>
-      <#---
       <div>
         <@inputPrimary.kw
           autocomplete="family-name"
@@ -59,7 +58,6 @@
           ${msg("lastName")}
         </@inputPrimary.kw>
       </div>
-      -->
 
       <div>
         <@inputPrimary.kw
