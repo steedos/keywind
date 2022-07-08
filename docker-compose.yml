@@ -10,10 +10,10 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     volumes:
-      - 'postgres_data:/var/lib/postgresql/data'
+      - 'postgres_data2:/var/lib/postgresql/data'
 
   keycloak:
-    image: quay.io/keycloak/keycloak:18.0.1
+    image: quay.io/keycloak/keycloak:17.0.0
     environment:
       - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
       - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
@@ -36,5 +36,5 @@ services:
       - "8080:8080"
 
 volumes:
-  postgres_data:
+  postgres_data2:
     driver: local

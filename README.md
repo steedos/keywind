@@ -74,6 +74,13 @@ You can inherit Keywind components in your own theme. For example, to resize the
 </#macro>
 ```
 
+## Test
+
+```bash
+docker-compose up
+```
+
+
 ## Build
 
 When you're ready to deploy your own theme, run the build command to generate a static production build.

@@ -26,7 +26,19 @@
       </div>
       <div>
         <@inputPrimary.kw
-          autocomplete="phone-number"
+          autocomplete="company"
+          invalid=["company"]
+          id="user.attributes.company"
+          name="user.attributes.company"
+          type="text"
+          value=(register.formData.company)!''
+        >
+          ${msg("company")}
+        </@inputPrimary.kw>
+      </div>
+      <div>
+        <@inputPrimary.kw
+          autocomplete="phone"
           invalid=["phoneNumber"]
           id="user.attributes.phoneNumber"
           name="user.attributes.phoneNumber"
