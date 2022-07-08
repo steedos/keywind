@@ -3,7 +3,7 @@
 <#import "components/input/primary.ftl" as inputPrimary>
 
 <@layout.registrationLayout
-  displayMessage=!messagesPerField.existsError("email", "firstName", "lastName", "username")
+  displayMessage=!messagesPerField.existsError("email", "firstName", "username")
   ;
   section
 >
@@ -44,9 +44,10 @@
           type="text"
           value=(user.firstName)!''
         >
-          ${msg("firstName")}
+          ${msg("fullName")}
         </@inputPrimary.kw>
       </div>
+      <#---
       <div>
         <@inputPrimary.kw
           autocomplete="family-name"
@@ -58,7 +59,32 @@
           ${msg("lastName")}
         </@inputPrimary.kw>
       </div>
+      -->
 
+      <div>
+        <@inputPrimary.kw
+          autocomplete="company"
+          invalid=["company"]
+          id="user.attributes.company"
+          name="user.attributes.company"
+          type="text"
+          value=(user.attributes.company)!''
+        >
+          ${msg("company")}
+        </@inputPrimary.kw>
+      </div>
+      <div>
+        <@inputPrimary.kw
+          autocomplete="phone"
+          invalid=["phoneNumber"]
+          id="user.attributes.phoneNumber"
+          name="user.attributes.phoneNumber"
+          type="text"
+          value=(user.attributes.phoneNumber)!''
+        >
+          ${msg("phoneNumber")}
+        </@inputPrimary.kw>
+      </div>
       <#-- TODO isAppInitiatedAction -->
 
       <div>
