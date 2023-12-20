@@ -13,7 +13,6 @@
   section
 >
   <#if section="header">
-    <!--${msg("loginAccountTitle")}-->
     ${msg("loginTitle", (realm.displayName!""))}
   <#elseif section="form">
     <#if realm.password>

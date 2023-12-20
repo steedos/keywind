@@ -9,7 +9,7 @@
   section
 >
   <#if section="header">
-    ${msg("registerTitle")}
+    ${msg("registerTitle", (realm.displayName!""))}
   <#elseif section="form">
     <form action="${url.registrationAction}" class="m-0 space-y-4" method="post">
       <div>
