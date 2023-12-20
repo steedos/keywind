@@ -32,7 +32,12 @@
       <@container.kw>
         <@card.kw>
           <@cardHeader.kw>
-            <img alt="logo" src="${url.resourcesPath}/dist/images/logo.png" class="h-10 mx-auto">
+            <#if client?? && client.attributes?? && client.attributes.logoUri?has_content>
+              <img alt="logo" src="${client.attributes.logoUri}" class="h-10 mx-auto">
+            <#else>
+              <img alt="logo" src="${url.resourcesPath}/dist/images/logo.png" class="h-10 mx-auto">
+            </#if>
+
             <@title.kw />
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
               <@subtitle.kw>
